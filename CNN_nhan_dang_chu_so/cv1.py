@@ -26,11 +26,11 @@ model = tf.keras.models.Sequential([
 model.compile(optimizer='sgd', loss='mean_squared_error',metrics=['accuracy'])
 #model.summary()
 
-model.fit(x_train, y_train, epochs=5)
+model.fit(x_train, y_train, epochs=10)
 model.save('model.h5')
 
-img_test = cv2.imread('anh4.png', 0) #ảnh của số 9
-# cv2.imshow('anh test', img_test)
-# cv2.waitKey(0)
-img_test = img_test.reshape(1, 28, 28, 1)
-print(model.predict(img_test))
+# img_test = cv2.imread('anh4.png', 0) #ảnh của số 9
+# # cv2.imshow('anh test', img_test)
+# # cv2.waitKey(0)
+# img_test = img_test.reshape(1, 28, 28, 1)
+# print(model.predict(img_test))
